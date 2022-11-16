@@ -1,0 +1,15 @@
+C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\obj\Release\net5.0\PubTmp\Out\remaserAPI.exe
+C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
+C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\obj\Release\net5.0\PubTmp\Out\appsettings.json
+C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\obj\Release\net5.0\PubTmp\Out\remaserAPI.dll
+C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\obj\Release\net5.0\PubTmp\Out\remaserAPI.deps.json
+C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\obj\Release\net5.0\PubTmp\Out\remaserAPI.runtimeconfig.json
+C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\obj\Release\net5.0\PubTmp\Out\remaserAPI.pdb
+C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\obj\Release\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
+C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\obj\Release\net5.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\obj\Release\net5.0\PubTmp\Out\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\obj\Release\net5.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\obj\Release\net5.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\obj\Release\net5.0\PubTmp\Out\System.Diagnostics.DiagnosticSource.dll
