@@ -1,8 +1,8 @@
-﻿namespace RemaserAPI.Models
+﻿namespace remaserAPI.Data.Entitys
 {
     public class Rol
     {
-        public int Id { get; set; } 
+        public int Id { get; set; }
         public string Name { get; set; }
     }
 }

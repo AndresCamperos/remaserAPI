@@ -2,11 +2,15 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using remaserAPI.Data;
+using remaserAPI.Data.Repositories;
+using remaserAPI.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,10 +32,18 @@ namespace remaserAPI
         {
 
             services.AddControllers();
+            services.AddDbContext<RemaserDBContext>(options => options.UseMySQL(Configuration.GetConnectionString("MySqlConnection")));
+
+            #region Scopeds
+            services.AddScoped<IPersonsHttpServices, PersonRepository>();
+            #endregion
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "remaserAPI", Version = "v1" });
             });
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

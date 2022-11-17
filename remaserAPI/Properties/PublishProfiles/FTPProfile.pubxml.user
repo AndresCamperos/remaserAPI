@@ -8,20 +8,38 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAemzMCU67DE6KIO4WGcWRSgAAAAACAAAAAAADZgAAwAAAABAAAAAzX3NR9yUpxRBbdpBD2amRAAAAAASAAACgAAAAEAAAAP1X3S/qhuifEgxCau7cwyEYAAAAiIYN2i/Co0NLZs1+qHW3ZGl9FGuw4xTcFAAAACGPciseLTe1Rmrm/exFBysXYxpV</EncryptedPassword>
     <_PublishTargetUrl>ftp://155.254.244.27/www.remaserapi.somee.com</_PublishTargetUrl>
-    <History>True|2022-11-15T19:31:09.7049887Z;True|2022-11-15T14:12:14.7097958-04:00;False|2022-11-15T14:10:57.7388000-04:00;False|2022-11-15T14:09:03.9104465-04:00;True|2022-11-15T13:56:49.6153353-04:00;False|2022-11-15T13:55:36.8679753-04:00;</History>
+    <History>True|2022-11-17T19:56:58.0511530Z;True|2022-11-15T15:31:09.7049887-04:00;True|2022-11-15T14:12:14.7097958-04:00;False|2022-11-15T14:10:57.7388000-04:00;False|2022-11-15T14:09:03.9104465-04:00;True|2022-11-15T13:56:49.6153353-04:00;False|2022-11-15T13:55:36.8679753-04:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="appsettings.Development.json">
       <publishTime>11/15/2022 13:50:20</publishTime>
     </File>
     <File Include="appsettings.json">
-      <publishTime>11/15/2022 13:50:20</publishTime>
+      <publishTime>11/17/2022 11:29:13</publishTime>
+    </File>
+    <File Include="BouncyCastle.Crypto.dll">
+      <publishTime>10/19/2021 07:53:34</publishTime>
+    </File>
+    <File Include="Google.Protobuf.dll">
+      <publishTime>01/28/2022 04:49:18</publishTime>
+    </File>
+    <File Include="K4os.Compression.LZ4.dll">
+      <publishTime>09/11/2020 21:11:58</publishTime>
+    </File>
+    <File Include="K4os.Compression.LZ4.Streams.dll">
+      <publishTime>09/11/2020 21:11:58</publishTime>
+    </File>
+    <File Include="K4os.Hash.xxHash.dll">
+      <publishTime>07/03/2019 16:39:02</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
-      <publishTime>04/12/2022 18:29:32</publishTime>
+      <publishTime>12/04/2022 18:29:32</publishTime>
     </File>
     <File Include="Microsoft.EntityFrameworkCore.dll">
-      <publishTime>04/12/2022 18:29:46</publishTime>
+      <publishTime>12/04/2022 18:29:46</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
+      <publishTime>04/12/2022 18:29:56</publishTime>
     </File>
     <File Include="Microsoft.Extensions.DependencyInjection.dll">
       <publishTime>06/15/2021 15:12:46</publishTime>
@@ -29,20 +47,29 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <File Include="Microsoft.OpenApi.dll">
       <publishTime>08/29/2020 16:14:12</publishTime>
     </File>
+    <File Include="MySql.Data.dll">
+      <publishTime>09/09/2022 10:08:02</publishTime>
+    </File>
+    <File Include="MySql.EntityFrameworkCore.dll">
+      <publishTime>09/09/2022 10:08:02</publishTime>
+    </File>
     <File Include="remaserAPI.deps.json">
-      <publishTime>11/15/2022 15:30:41</publishTime>
+      <publishTime>11/17/2022 15:55:59</publishTime>
     </File>
     <File Include="remaserAPI.dll">
-      <publishTime>11/15/2022 15:30:41</publishTime>
+      <publishTime>11/17/2022 15:55:58</publishTime>
     </File>
     <File Include="remaserAPI.exe">
-      <publishTime>11/15/2022 15:30:41</publishTime>
+      <publishTime>11/17/2022 15:55:58</publishTime>
     </File>
     <File Include="remaserAPI.pdb">
-      <publishTime>11/15/2022 15:30:41</publishTime>
+      <publishTime>11/17/2022 15:55:58</publishTime>
     </File>
     <File Include="remaserAPI.runtimeconfig.json">
-      <publishTime>11/15/2022 15:30:41</publishTime>
+      <publishTime>11/17/2022 15:55:59</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>07/19/2017 06:01:34</publishTime>
     </File>
     <File Include="Swashbuckle.AspNetCore.Swagger.dll">
       <publishTime>09/23/2020 08:47:20</publishTime>
@@ -53,11 +80,20 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <File Include="Swashbuckle.AspNetCore.SwaggerUI.dll">
       <publishTime>09/23/2020 08:47:24</publishTime>
     </File>
+    <File Include="System.Configuration.ConfigurationManager.dll">
+      <publishTime>11/20/2017 14:09:04</publishTime>
+    </File>
     <File Include="System.Diagnostics.DiagnosticSource.dll">
-      <publishTime>12/11/2020 22:40:42</publishTime>
+      <publishTime>11/12/2020 22:40:42</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>07/19/2017 06:01:34</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>11/15/2022 15:30:44</publishTime>
+      <publishTime>11/17/2022 15:56:03</publishTime>
+    </File>
+    <File Include="ZstdNet.dll">
+      <publishTime>09/09/2022 10:03:36</publishTime>
     </File>
   </ItemGroup>
 </Project>

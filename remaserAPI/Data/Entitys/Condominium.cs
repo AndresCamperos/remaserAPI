@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RemaserAPI.Models
+namespace remaserAPI.Data.Entitys
 {
     public class Condominium
     {

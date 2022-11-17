@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RemaserAPI.Models
+namespace remaserAPI.Data.Entitys
 {
     public class Person
     {

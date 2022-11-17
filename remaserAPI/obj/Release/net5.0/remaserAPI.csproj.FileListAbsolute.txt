@@ -30,3 +30,15 @@ C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\bin\Release\net5.0\Microso
 C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\bin\Release\net5.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\acamperos\source\repos\remaserAPI\remaserAPI\bin\Release\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\acamperos\source\repos\RemaserAPI\remaserAPI\bin\Release\net5.0\Google.Protobuf.dll
+C:\Users\acamperos\source\repos\RemaserAPI\remaserAPI\bin\Release\net5.0\K4os.Compression.LZ4.dll
+C:\Users\acamperos\source\repos\RemaserAPI\remaserAPI\bin\Release\net5.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\acamperos\source\repos\RemaserAPI\remaserAPI\bin\Release\net5.0\K4os.Hash.xxHash.dll
+C:\Users\acamperos\source\repos\RemaserAPI\remaserAPI\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\acamperos\source\repos\RemaserAPI\remaserAPI\bin\Release\net5.0\MySql.Data.dll
+C:\Users\acamperos\source\repos\RemaserAPI\remaserAPI\bin\Release\net5.0\ZstdNet.dll
+C:\Users\acamperos\source\repos\RemaserAPI\remaserAPI\bin\Release\net5.0\MySql.EntityFrameworkCore.dll
+C:\Users\acamperos\source\repos\RemaserAPI\remaserAPI\bin\Release\net5.0\BouncyCastle.Crypto.dll
+C:\Users\acamperos\source\repos\RemaserAPI\remaserAPI\bin\Release\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\acamperos\source\repos\RemaserAPI\remaserAPI\bin\Release\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\acamperos\source\repos\RemaserAPI\remaserAPI\bin\Release\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll

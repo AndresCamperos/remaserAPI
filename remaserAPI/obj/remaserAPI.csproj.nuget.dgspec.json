@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\acamperos\\source\\repos\\remaserAPI\\remaserAPI\\remaserAPI.csproj": {}
+    "C:\\Users\\acamperos\\source\\repos\\RemaserAPI\\remaserAPI\\remaserAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\acamperos\\source\\repos\\remaserAPI\\remaserAPI\\remaserAPI.csproj": {
+    "C:\\Users\\acamperos\\source\\repos\\RemaserAPI\\remaserAPI\\remaserAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\acamperos\\source\\repos\\remaserAPI\\remaserAPI\\remaserAPI.csproj",
+        "projectUniqueName": "C:\\Users\\acamperos\\source\\repos\\RemaserAPI\\remaserAPI\\remaserAPI.csproj",
         "projectName": "remaserAPI",
-        "projectPath": "C:\\Users\\acamperos\\source\\repos\\remaserAPI\\remaserAPI\\remaserAPI.csproj",
+        "projectPath": "C:\\Users\\acamperos\\source\\repos\\RemaserAPI\\remaserAPI\\remaserAPI.csproj",
         "packagesPath": "C:\\Users\\acamperos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\acamperos\\source\\repos\\remaserAPI\\remaserAPI\\obj\\",
+        "outputPath": "C:\\Users\\acamperos\\source\\repos\\RemaserAPI\\remaserAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,10 @@
           "targetAlias": "net5.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "MySql.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.17, )"
             },

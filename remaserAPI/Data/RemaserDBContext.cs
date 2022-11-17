@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RemaserAPI.Models;
+using remaserAPI.Data.Entitys;
 
-namespace remaserAPI.Models
+namespace remaserAPI.Data
 {
-    public class RemaserDBContext: DbContext
+    public class RemaserDBContext : DbContext
     {
         public RemaserDBContext(DbContextOptions<RemaserDBContext> context)
             : base(context)
