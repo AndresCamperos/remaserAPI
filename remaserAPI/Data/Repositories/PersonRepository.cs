@@ -38,8 +38,6 @@ namespace remaserAPI.Data.Repositories
             }
         }
 
-        
-
         public async Task Post(Person person)
         {
             try
@@ -72,11 +70,11 @@ namespace remaserAPI.Data.Repositories
                 throw;
             }
         }
-        public async Task Delete(int id)
+        public async Task Delete(Person person)
         {
             try
             {
-                _context.Remove(id);
+                _context.Persons.Remove(person);
                 await _context.SaveChangesAsync();
             }
             catch (Exception)
@@ -86,7 +84,7 @@ namespace remaserAPI.Data.Repositories
             }
         }
 
-        public async Task<bool> isValid(int id)
+        public async Task<bool> Exist(int id)
         {
             try
             {

@@ -11,18 +11,18 @@ namespace remaserAPI.Controllers
     [ApiController]
     public class PersonController : ControllerBase
     {
-        private readonly IPersonsHttpServices _HttpService;
+        private readonly IPersonsHttpServices _personHttpService;
         public PersonController(IPersonsHttpServices services)
         {
-            _HttpService = services;
+            _personHttpService = services;
         }
         // GET: api/Person
         [HttpGet]
-        public async Task<ActionResult<Person>> Get()
+        public async Task<ActionResult> Get()
         {
             try
             {
-                List<Person> persons = await _HttpService.GetAll();               
+                List<Person> persons = await _personHttpService.GetAll();               
                 
                 return Ok(persons);
 
@@ -37,11 +37,11 @@ namespace remaserAPI.Controllers
 
         // GET api/<Person/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Person>> Get(int id)
+        public async Task<ActionResult> Get(int id)
         {
             try
             {
-                Person person = await _HttpService.Get(id);
+                Person person = await _personHttpService.Get(id);
                 if(person == null)
                 {
                     return NotFound();
@@ -60,7 +60,7 @@ namespace remaserAPI.Controllers
         {
             try
             {
-                await _HttpService.Post(person);
+                await _personHttpService.Post(person);
                 return Created("", person);    
             }
             catch (Exception)
@@ -78,11 +78,11 @@ namespace remaserAPI.Controllers
             {
                 if(person.Id != id) { return BadRequest(); }
 
-                bool result = await _HttpService.isValid(id);
+                bool result = await _personHttpService.Exist(id);
 
                 if (result)
                 {
-                    await _HttpService.Put(person);
+                    await _personHttpService.Put(person);
                 }
                 else
                 {
@@ -103,12 +103,20 @@ namespace remaserAPI.Controllers
         {
             try
             {
-                await _HttpService.Delete(id);
+                Person person = await _personHttpService.Get(id);
+
+                if (person != null)
+                {
+                    await _personHttpService.Delete(person);
+                }
+                else
+                {
+                    return NotFound();
+                }
                 return Ok();
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

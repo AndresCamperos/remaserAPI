@@ -8,9 +8,9 @@ namespace remaserAPI.Services.Interfaces
     {
         Task<List<Person>> GetAll();
         Task<Person> Get(int id);
-        Task<bool> isValid(int id);
+        Task<bool> Exist(int id);
         Task Post(Person person);
         Task Put(Person person);
-        Task Delete(int id);
+        Task Delete(Person person);
     }
 }

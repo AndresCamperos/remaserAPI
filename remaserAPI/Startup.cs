@@ -32,10 +32,16 @@ namespace remaserAPI
         {
 
             services.AddControllers();
-            services.AddDbContext<RemaserDBContext>(options => options.UseMySQL(Configuration.GetConnectionString("MySqlConnection")));
-
+            #region Connections
+            //SQL Connection*
+            services.AddDbContext<RemaserDBContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("SqlServerConnection")));
+            //MySQL
+            //services.AddDbContext<RemaserDBContext>(options => options.UseMySQL(Configuration.GetConnectionString("MySqlConnection")));
+            #endregion
             #region Scopeds
             services.AddScoped<IPersonsHttpServices, PersonRepository>();
+            services.AddScoped<IBuildingsHttpServices, BuildingRepository>();
             #endregion
 
             services.AddSwaggerGen(c =>
