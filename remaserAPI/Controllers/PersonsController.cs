@@ -1,49 +1,54 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System;
 using remaserAPI.Data.Entitys;
-using System.Threading.Tasks;
 using remaserAPI.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace remaserAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BuildingController : ControllerBase
+    [Authorize]
+    public class PersonsController : ControllerBase
     {
-        private readonly IBuildingsHttpServices _buildingsHttpServices;
-        public BuildingController(IBuildingsHttpServices services)
+        private readonly IPersonsHttpServices _personHttpService;
+        public PersonsController(IPersonsHttpServices services)
         {
-            _buildingsHttpServices = services;
-                
+            _personHttpService = services;
         }
-        // GET: api/Building
+        // GET: api/Person
         [HttpGet]
-        public async Task<ActionResult<Building>> Get()
+        public async Task<ActionResult> Get()
         {
             try
-            {                
-                List<Building> buildings = await _buildingsHttpServices.GetAll();
-                return Ok(buildings);
+            {
+                List<Person> persons = await _personHttpService.GetAll();               
+                
+                return Ok(persons);
+
             }
             catch (Exception)
             {
+
                 throw;
             }
+	
         }
 
-        // GET api/Building/5
+        // GET api/<Person/5
         [HttpGet("{id}")]
         public async Task<ActionResult> Get(int id)
         {
             try
             {
-                Building building = await _buildingsHttpServices.Get(id); 
-                if (building == null)
+                Person person = await _personHttpService.Get(id);
+                if(person == null)
                 {
                     return NotFound();
                 }
-                return Ok(building);
+                return Ok(person);
             }
             catch (Exception)
             {
@@ -51,57 +56,60 @@ namespace remaserAPI.Controllers
             }
         }
 
-        // POST api/Building
+        //POST api/<PersonController>
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] Building building)
+        public async Task<IActionResult> Post([FromBody] Person person)
         {
             try
             {
-                //campos obligatorios
-                await _buildingsHttpServices.Post(building);
-                return Created("", building);
+                await _personHttpService.Post(person);
+                return Created("", person);
             }
             catch (Exception)
             {
+
                 throw;
             }
         }
 
-        // PUT api/Building/5
+        // PUT api/Person/5
         [HttpPut("{id}")]
-        public async Task<ActionResult> Put(int id, [FromBody] Building building)
+        public async Task<ActionResult> Put(int id, [FromBody] Person person)
         {
             try
             {
-                if(building.Id != id) { return BadRequest();}
-                bool result = await _buildingsHttpServices.Exist(building.Id);
+                if(person.Id != id) { return BadRequest(); }
+
+                bool result = await _personHttpService.Exist(id);
+
                 if (result)
                 {
-                    await _buildingsHttpServices.Put(building);
+                    await _personHttpService.Put(person);
                 }
                 else
                 {
                     return NotFound();
                 }
-                
                 return NoContent();
             }
             catch (Exception)
             {
+
                 throw;
             }
         }
 
-        // DELETE api/Building/5
+        // DELETE api/Person/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(int id)
+        public async Task<ActionResult>  Delete(int id)
         {
             try
             {
-                Building building = await _buildingsHttpServices.Get(id);
-                if(building != null)
+                Person person = await _personHttpService.Get(id);
+
+                if (person != null)
                 {
-                    await _buildingsHttpServices.Delete(building); 
+                    await _personHttpService.Delete(person);
                 }
                 else
                 {

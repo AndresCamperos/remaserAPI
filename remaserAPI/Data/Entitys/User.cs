@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace remaserAPI.Data.Entitys
@@ -7,12 +6,12 @@ namespace remaserAPI.Data.Entitys
     public class User
     {
         public int Id { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
         [ForeignKey("Rol")]
         public int RolId { get; set; }
         public Rol Rol { get; set; }
-        [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }
-        public string Password { get; set; }
+        public bool EnableUser { get; set; }
         public DateTime CreationDate { get; set; }
     }
 }

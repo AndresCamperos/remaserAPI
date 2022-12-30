@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\acamperos\\source\\repos\\RemaserAPI\\remaserAPI\\remaserAPI.csproj": {}
+    "C:\\Users\\acamperos\\source\\repos\\remaserAPI\\remaserAPI\\remaserAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\acamperos\\source\\repos\\RemaserAPI\\remaserAPI\\remaserAPI.csproj": {
+    "C:\\Users\\acamperos\\source\\repos\\remaserAPI\\remaserAPI\\remaserAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\acamperos\\source\\repos\\RemaserAPI\\remaserAPI\\remaserAPI.csproj",
+        "projectUniqueName": "C:\\Users\\acamperos\\source\\repos\\remaserAPI\\remaserAPI\\remaserAPI.csproj",
         "projectName": "remaserAPI",
-        "projectPath": "C:\\Users\\acamperos\\source\\repos\\RemaserAPI\\remaserAPI\\remaserAPI.csproj",
+        "projectPath": "C:\\Users\\acamperos\\source\\repos\\remaserAPI\\remaserAPI\\remaserAPI.csproj",
         "packagesPath": "C:\\Users\\acamperos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\acamperos\\source\\repos\\RemaserAPI\\remaserAPI\\obj\\",
+        "outputPath": "C:\\Users\\acamperos\\source\\repos\\remaserAPI\\remaserAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.17, )"
@@ -59,6 +63,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.25.1, )"
             }
           },
           "imports": [

@@ -15,6 +15,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.Extensions.Options;
 
 namespace remaserAPI
 {
@@ -27,6 +31,7 @@ namespace remaserAPI
 
         public IConfiguration Configuration { get; }
 
+        
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -42,14 +47,36 @@ namespace remaserAPI
             #region Scopeds
             services.AddScoped<IPersonsHttpServices, PersonRepository>();
             services.AddScoped<IBuildingsHttpServices, BuildingRepository>();
+            services.AddScoped<IUsersHttpServices, UserRepository>();
             #endregion
+            #region JWT
+
+            var secretkey = Configuration.GetValue<string>("SecretKey");
+            var keyBytes = Encoding.UTF8.GetBytes(secretkey);
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(config =>
+            {
+                config.RequireHttpsMetadata = false;// https
+                config.SaveToken = true;
+                config.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(keyBytes),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
+            #endregion
+
 
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "remaserAPI", Version = "v1" });
             });
 
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,14 +87,23 @@ namespace remaserAPI
                 app.UseDeveloperExceptionPage();
                 
             }
+            #region Configuracion de CORS
+            app.UseCors(options =>
+            {
+                options.WithOrigins("*");
+                options.AllowAnyMethod();
+                options.AllowAnyHeader();
+            });
+            #endregion
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "remaserAPI v1"));
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseAuthentication(); //jwt
             app.UseAuthorization();
+
 
             app.UseEndpoints(endpoints =>
             {
